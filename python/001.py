@@ -22,29 +22,5 @@ def pop_sort():
     print(a)
 
 
-def insert_sort():
-    """
-    插入排序
-    算法思路：
-    时间复杂度：
-    空间复杂度：
-    """
-    pass
-
-
-def quick_sort():
-    """
-    快速排序
-    """
-    pass
-
-
-def dui_sort():
-    """
-    堆排序
-    """
-    pass
-
-
 if __name__ == '__main__':
     pop_sort()
