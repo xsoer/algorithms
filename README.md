@@ -1,6 +1,9 @@
 # algorithms
 日常算法训练
 
+## 包含的内容
+![结构图](utils/数据结构与算法.png)
+
 ## 排序类
 - 001-冒泡排序 [python版本](python/001.py) [go版本](golang/001.go)
 - 002-插入排序 [python版本](python/002.py) [go版本](golang/002.go)
