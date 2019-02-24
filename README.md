@@ -14,3 +14,4 @@
 - 007-计数排序 [python版本](src/python/007.py) [go版本](src/golang/007.go)
 - 008-基数排序 [python版本](src/python/008.py) [go版本](src/golang/008.go)
 - 009-桶排序   [python版本](src/python/009.py) [go版本](src/golang/009.go) 
+- 010-堆排序   [python版本](src/python/010.py) [go版本](src/golang/010.go) 
