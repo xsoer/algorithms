@@ -16,36 +16,28 @@ def merge_sort(a: list):
     if cnt < 2:
         return a
     mid = cnt // 2
-    print(mid)
-    left = a[0: mid]
-    right = a[mid:cnt]
-    return merge(merge_sort(left), merge_sort(right))
+    return merge(merge_sort(a[:mid]), merge_sort(a[mid:]))
 
 
 def merge(left: list, right: list):
     result = []
-    left_cnt = len(left)
-    right_cnt = len(right)
-    left_index = 0
-    right_index = 0
-    for i in range(left_cnt+right_cnt):
-        if left_index >= left_cnt:
-            result[i] = right[right_index]
-            right_index += 1
-        elif right_index >= right_cnt:
-            result[i] = left[left_index]
-            left_index += 1
-        elif left[left_index] > right[right_index]:
-            print(right_index)
-            result[i] = right[right_index]
-            right_index += 1
+    # left_cnt = len(left)
+    # right_cnt = len(right)
+    i = 0
+    j = 0
+    while i < len(left) and j < len(right):
+        if left[i] <= right[j]:
+            result.append(left[i])
+            i += 1
         else:
-            result[i] = left[left_index]
-            left_index += 1
+            result.append(right[j])
+            j += 1
+    result += left[i:]
+    result += right[j:]
     return result
+
 
 
 if __name__ == '__main__':
     a = [2, 1, 4, 6, 3, 45, 76, 47, 34, 5, 23]
-    merge_sort(a)
-    print(a)
+    print(merge_sort(a))
