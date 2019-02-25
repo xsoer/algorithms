@@ -21,8 +21,6 @@ def merge_sort(a: list):
 
 def merge(left: list, right: list):
     result = []
-    # left_cnt = len(left)
-    # right_cnt = len(right)
     i = 0
     j = 0
     while i < len(left) and j < len(right):
@@ -35,7 +33,6 @@ def merge(left: list, right: list):
     result += left[i:]
     result += right[j:]
     return result
-
 
 
 if __name__ == '__main__':
