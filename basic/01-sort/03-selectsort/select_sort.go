@@ -4,24 +4,23 @@
  * 选择排序
  */
 
- package main
+package main
 
- import "fmt"
- 
- func main() {
-	 arr := [10]int {4,6,2,3,0,12,23,45,13,9}
-	 fmt.Println(arr)
-	 arr_len  := len(arr)
- 
-	 for i:=0;i<arr_len;i++{
-		 min := i
-		 for j:=i;j<arr_len;j++{
-			 if arr[min]>arr[j]{
-				 min = j
-			 }
-		 }
-		 arr[i],arr[min] = arr[min],arr[i]
-		 fmt.Println(arr)
-	 }
- }
- 
+import "fmt"
+
+func main() {
+	arr := [10]int{4, 6, 2, 3, 0, 12, 23, 45, 13, 9}
+	fmt.Println(arr)
+	arr_len := len(arr)
+
+	for i := 0; i < arr_len; i++ {
+		min := i
+		for j := i; j < arr_len; j++ {
+			if arr[min] > arr[j] {
+				min = j
+			}
+		}
+		arr[i], arr[min] = arr[min], arr[i]
+		fmt.Println(arr)
+	}
+}
