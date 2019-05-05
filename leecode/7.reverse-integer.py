@@ -6,7 +6,7 @@
 class Solution:
     def reverse(self, x: int) -> int:
         a = str(x)[::-1]
-        if a[-1] == '-':            
+        if a[-1] == '-':
             x =  -1*int(a[:-1])
         else:
             x =  int(a)
