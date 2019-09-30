@@ -13,10 +13,19 @@ def bubble_sort(a: list):
     空间复杂度：O(1)
     """
     cnt = len(a)
-    for i in range(cnt):
-        for j in range(cnt)[i:]:
-            if a[i] > a[j]:
-                a[i], a[j] = a[j], a[i]
+    for i in range(cnt-2):
+        for j in range(cnt-1, i, -1):
+            if a[j] < a[j-1]:
+                a[j], a[j-1] = a[j-1], a[j]
+    # for i in range(1, cnt):
+    #     for j in range(i-1, cnt-1):
+    #         if a[j] > a[j+1]:
+    #             a[j], a[j+1] = a[j+1] , a[j]
+
+    # for i in range(cnt):
+    #     for j in range(cnt)[i:]:
+    #         if a[i] > a[j]:
+    #             a[i], a[j] = a[j], a[i]
 
 
 if __name__ == '__main__':
